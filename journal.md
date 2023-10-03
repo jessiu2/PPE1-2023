@@ -1,1 +1,1 @@
-# Journal de bord du projet encadr
+# Journal de bord du projet encadré
