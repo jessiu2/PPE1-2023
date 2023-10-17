@@ -13,16 +13,16 @@ Le système de fichiers – Les chemin
 
 ## Séance 2
 • commandes git :
-    git add
-    git status
-    ls -a pour voir si c'est bien un dépôt synchronisé avec git
-    git commit -m "remplir message et ne pas fermer les guillemets. 
-    git push : pousser les modifications
-    git fetch : récupérer journal des modification, les metadonnées du dépôt
-    git pull : pour mettre à jour le dépôt sur l'ordi, récupérer les nouveaux commits
-    git rm : pour supprimer, mais peut revenir si on met à jour le dépôt
-    git log : permet de voir l'ensemble des commits
-    git tag -a -m tagname [commit (si diff du commit courant)]
+   git add
+   git status
+   ls -a pour voir si c'est bien un dépôt synchronisé avec git
+   git commit -m "remplir message et ne pas fermer les guillemets. 
+   git push : pousser les modifications
+   git fetch : récupérer journal des modification, les metadonnées du dépôt
+   git pull : pour mettre à jour le dépôt sur l'ordi, récupérer les nouveaux commits
+   git rm : pour supprimer, mais peut revenir si on met à jour le dépôt
+   git log : permet de voir l'ensemble des commits
+   git tag -a -m tagname
 
 Pour les exercices : git add . > git commit -m "Message" > git push
 
