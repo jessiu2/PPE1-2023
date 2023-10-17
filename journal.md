@@ -48,9 +48,13 @@ Comment pouvez-vous :
 
 Pour les exercices :
 • Compter le nombre d’annotations par année (2016, 2017 et 2018)
+
 • limiter ce comptage aux lieux (Location),
+
 • sauvegarder ces résultats dans un (seul) fichier,
+
 • établir le classement des lieux les plus cités.
+
 • trouver les annotations les plus fréquentes pour votre mois de naissance, toutes
 années confondues.
 
