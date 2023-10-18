@@ -63,10 +63,10 @@ années confondues.
 Réponse des exercices
 Deux commandes pour rendre le fichier exécutable : 
 chmod +x Fichier.sh 
->>Mais celui-ci ne marche pas sur mon système linux
+>Mais celui-ci ne marche pas sur mon système linux
 
 bash ./Fichier.sh 
->>Ça marche
+>Ça marche
 
 
 ANNEE=$1
@@ -75,7 +75,7 @@ cat ./ann/$ANNEE/*/*.ann
 ls "$1"/"$2"/*.ann
 
 Instructions conditionnelles
-f fichier vrai si le fichier existe
+>f fichier vrai si le fichier existe
 -d dossier vrai si le dossier existe
 -s fichier vrai si le fichier existe et n’est pas vide
 Sur des chaînes de caractères
@@ -99,3 +99,13 @@ Pourquoi il sort les resultats de comptage des locutions ?
 1. installer sur Linux (terminal) Lynx
 2. ouvrir un webpage, ex :
 lynx pluriTAL.org
+### Projet
+1. installer sur Linux (terminal) Lynx
+2. ouvrir un webpage, ex :
+lynx pluriTAL.org
+
+pour récupérer le contenu textuel d'une page pour l'afficher (sans navigation)
+<lynx -dump pluriTAL.org>
+retirer la liste des liens d'une page à l'affichage
+<lynx -listonly -dump pluriTAL.org>
+<lynx -dump -nolist pluriTAL.org>
