@@ -59,3 +59,43 @@ Pour les exercices :
 années confondues.
 
 
+## Séance 5
+Réponse des exercices
+Deux commandes pour rendre le fichier exécutable : 
+chmod +x Fichier.sh 
+>>Mais celui-ci ne marche pas sur mon système linux
+
+bash ./Fichier.sh 
+>>Ça marche
+
+
+ANNEE=$1
+cat ./ann/$ANNEE/*/*.ann 
+
+ls "$1"/"$2"/*.ann
+
+Instructions conditionnelles
+f fichier vrai si le fichier existe
+-d dossier vrai si le dossier existe
+-s fichier vrai si le fichier existe et n’est pas vide
+Sur des chaînes de caractères
+= ou != tester si deux chaînes sont identiques (=) ou différentes (!=)
+< ou > pour déterminer si in chaîne est avant ou après une autre dans
+l’ordre alphabétique
+-n chaine vrai si la chaîne n’est pas vide
+-z vrai si la chaîne est vide (ex: argument non fourni)
+
+???Je n'ai pas bien compris le code suivant : 
+while read LINE
+do
+  echo "la ligne est :$LINE"
+done < ./reponses.txt
+
+echo "on a fini"
+
+Pourquoi il sort les resultats de comptage des locutions ?
+
+### Projet
+1. installer sur Linux (terminal) Lynx
+2. ouvrir un webpage, ex :
+lynx pluriTAL.org
