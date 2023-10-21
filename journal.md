@@ -13,16 +13,16 @@ Le système de fichiers – Les chemin
 
 ## Séance 2
 • commandes git :
-    git add
-    git status
-    ls -a pour voir si c'est bien un dépôt synchronisé avec git
-    git commit -m "remplir message et ne pas fermer les guillemets. 
-    git push : pousser les modifications
-    git fetch : récupérer journal des modification, les metadonnées du dépôt
-    git pull : pour mettre à jour le dépôt sur l'ordi, récupérer les nouveaux commits
-    git rm : pour supprimer, mais peut revenir si on met à jour le dépôt
-    git log : permet de voir l'ensemble des commits
-    git tag -a -m tagname [commit (si diff du commit courant)]
+   > git add
+   > git status
+   > ls -a pour voir si c'est bien un dépôt synchronisé avec git
+   > git commit -m "remplir message et ne pas fermer les guillemets. 
+   > git push : pousser les modifications
+   > git fetch : récupérer journal des modification, les metadonnées du dépôt
+   > git pull : pour mettre à jour le dépôt sur l'ordi, récupérer les nouveaux commits
+   > git rm : pour supprimer, mais peut revenir si on met à jour le dépôt
+   > git log : permet de voir l'ensemble des commits
+   > git tag -a -m tagname [commit (si diff du commit courant)]
 
 Pour les exercices : git add . > git commit -m "Message" > git push
 
@@ -76,22 +76,20 @@ ls "$1"/"$2"/*.ann
 
 Instructions conditionnelles
 >f fichier vrai si le fichier existe
--d dossier vrai si le dossier existe
--s fichier vrai si le fichier existe et n’est pas vide
-Sur des chaînes de caractères
-= ou != tester si deux chaînes sont identiques (=) ou différentes (!=)
-< ou > pour déterminer si in chaîne est avant ou après une autre dans
-l’ordre alphabétique
--n chaine vrai si la chaîne n’est pas vide
--z vrai si la chaîne est vide (ex: argument non fourni)
+>-d dossier vrai si le dossier existe
+>-s fichier vrai si le fichier existe et n’est pas vide Sur des chaînes de caractères
+>= ou != tester si deux chaînes sont identiques (=) ou différentes (!=)
+>< ou > pour déterminer si in chaîne est avant ou après une autre dans l’ordre alphabétique
+>-n chaine vrai si la chaîne n’est pas vide
+>-z vrai si la chaîne est vide (ex: argument non fourni)
 
 ???Je n'ai pas bien compris le code suivant : 
-while read LINE
-do
-  echo "la ligne est :$LINE"
-done < ./reponses.txt
+>while read LINE
+>do
+ > echo "la ligne est :$LINE"
+>done < ./reponses.txt
 
-echo "on a fini"
+>echo "on a fini"
 
 Pourquoi il sort les resultats de comptage des locutions ?
 
@@ -99,13 +97,9 @@ Pourquoi il sort les resultats de comptage des locutions ?
 1. installer sur Linux (terminal) Lynx
 2. ouvrir un webpage, ex :
 lynx pluriTAL.org
-### Projet
-1. installer sur Linux (terminal) Lynx
-2. ouvrir un webpage, ex :
-lynx pluriTAL.org
 
 pour récupérer le contenu textuel d'une page pour l'afficher (sans navigation)
-<lynx -dump pluriTAL.org>
+>lynx -dump pluriTAL.org
 retirer la liste des liens d'une page à l'affichage
-<lynx -listonly -dump pluriTAL.org>
-<lynx -dump -nolist pluriTAL.org>
+>lynx -listonly -dump pluriTAL.org
+>lynx -dump -nolist pluriTAL.org>
