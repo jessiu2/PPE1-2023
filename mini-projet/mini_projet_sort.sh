@@ -9,7 +9,6 @@ while IFS= read -r line; do
 done < "$file"
 
     if [$# -ne 1]
-do
   echo "Un argument attendu exactement"
   
   exit
