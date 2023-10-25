@@ -1,15 +1,15 @@
-    if [$# -ne 1]
+if [$# -ne 1]
   echo "Un argument attendu exactement"
   
   exit
-else
+fi
+
    if [-f $1]
    then 
      echo "on a bien un fichier"
 else
      echo "on attend un fichiers qui existe"
      exit
-   fi
 fi
 
 
