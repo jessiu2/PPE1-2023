@@ -3,6 +3,7 @@ if [$# -ne 1]
   
   exit
 fi
+
    if [-f $1]
    then 
      echo "on a bien un fichier"
