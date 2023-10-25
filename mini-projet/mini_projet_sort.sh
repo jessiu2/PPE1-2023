@@ -19,4 +19,4 @@ do
    echo -e "${lineno}\t${line}";
    lineno=$(expr $lineno + 1);
 
-done < "$file"
+done < "$file";
