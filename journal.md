@@ -103,3 +103,11 @@ pour récupérer le contenu textuel d'une page pour l'afficher (sans navigation)
 retirer la liste des liens d'une page à l'affichage
 >lynx -listonly -dump pluriTAL.org
 >lynx -dump -nolist pluriTAL.org>
+
+## Séance 6
+### mini-projet en groupe
+
+Aller sur la section "archives" du site Plurital : 
+http://www.tal.univ-paris3.fr/plurital/archives.html
+
+CONSTRUCTION DE SCRIPT
