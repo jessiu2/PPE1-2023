@@ -1,8 +1,6 @@
 if [$# -ne 1]
   echo "Un argument attendu exactement"
-  
   exit
-fi
 
    if [-f $1]
    then 
