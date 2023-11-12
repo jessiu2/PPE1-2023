@@ -110,4 +110,52 @@ retirer la liste des liens d'une page à l'affichage
 Aller sur la section "archives" du site Plurital : 
 http://www.tal.univ-paris3.fr/plurital/archives.html
 
-CONSTRUCTION DE SCRIPT
+construction de tableaux
+il faudra avoir uniquement des codes 200 (réussite) dans le tableau
+avoir un seul encodage au mieux UTF-8
+
+### Exercice et les codes
+
+EX1 :
+
+si espaces dans les urls alors ça posera problème
+transformer "urls/fr.txt" en paramètre du script
+remplacer par $1
+ajout du if [ $# -ne 1 ]
+
+EX2 :
+
+Pour extraire le code HTTP de réponse à la requête : code=$(curl -o /dev/null -s -w "%{http_code}\n" -L $line)
+>-o /dev/null : spécifier qu'on n'affiche pas le contenu à l'écran
+>-s : mode silencieux (pas d'info de progression de la requête)
+>-w "%{http_code}\n" : spécifier le format de sortie -> uniquement le code HTTP
+>-L: suivre les redirections et corriger erreur
+
+Pour extraire l'encodage : charset=$(curl -s -I "$line" | grep -i "Content-Type" | sed -n 's/.charset=([^;]).*/\1/p')
+>-I : pour afficher uniquement les entêtes
+>grep -i "Content-Type" : recherche la ligne d'entête qui contient Content-Type qui contient l'encodage
+>sed -n : recherche la regex dans la ligne
+>'s/.charset=([^;]).*/\1/p' : capture la valeur de l'encodage (tout ce qui suit "charset=" jusqu'au prochain ;)
+s/ : début substitution
+puis remplace la ligne par la valeur capturée, qui est stockée dans \1
+-n : supprime les lignes non modifiées
+p : affiche la ligne modifiée
+
+## Seance 7
+Correction des exercices :
+curl -s -I -W "%{http_code}" -o /dev/null https://fr.wikipedia.org/wiki/Robot
+curl -s -I https://fr.wikipedia.org/wiki/Robot|
+
+curl -s -I -L -w "%{http_code}" fr.wikipedia.org/wiki/Robot_d%27indexation | grep -P -o "charset=\S+" 
+#
+
+curl -s -I -L -w "%{http_code}" fr.wikipedia.org/wiki/Robot_d%27indexation | grep -P -o "charset=\S+" | cut -d"=" -f1
+#récupérer la première colone 
+
+curl -s -I -L -w "%{http_code}" fr.wikipedia.org/wiki/Robot_d%27indexation | grep -P -o "charset=\S+" | cut -d"=" -f2
+#récupérer la deuxième colone 
+
+Exercices : Candide
+Nettoyage du fichier avec grep -o -E '\w+' | tr '[:upper:]' '[:lower:]' | tr -d '[:punct:]'
+Mots les plus fréquents avec cat ./fichier_nettoye.txt | sort | uniq -c | sort -nr | head -n $nb_mots
+Bigrammes les plus fréquents avec paste <(head -n -1 fichier_nettoye_bigrammes.txt) <(tail -n +2 fichier_nettoye_bigrammes.txt) > bigrammes.txt
