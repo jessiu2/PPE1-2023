@@ -156,6 +156,11 @@ curl -s -I -L -w "%{http_code}" fr.wikipedia.org/wiki/Robot_d%27indexation | gre
 #récupérer la deuxième colone 
 
 Exercices : Candide
->Nettoyage du fichier avec grep -o -E '\w+' | tr '[:upper:]' '[:lower:]' | tr -d '[:punct:]'
->Mots les plus fréquents avec cat ./fichier_nettoye.txt | sort | uniq -c | sort -nr | head -n $nb_mots
+>Nettoyage du fichier 
+grep -oE '\w+' dossier_de_travail/candide.txt > mots_par_ligne.txt 
+tr -d '[:punct:]' < mots_par_ligne.txt | tr '[:upper:]' '[:lower:]' > texte_nettoye.txt
+ 
+>Mots les plus fréquents 
+cat ./fichier_nettoye.txt | sort | uniq -c | sort -nr | head -n $nb_mots
+
 >Bigrammes les plus fréquents avec paste <(head -n -1 fichier_nettoye_bigrammes.txt) <(tail -n +2 fichier_nettoye_bigrammes.txt) > bigrammes.txt
