@@ -166,4 +166,41 @@ cat ./fichier_nettoye.txt | sort | uniq -c | sort -nr | head -n $nb_mots
 >Bigrammes les plus fréquents avec paste <(head -n -1 fichier_nettoye_bigrammes.txt) <(tail -n +2 fichier_nettoye_bigrammes.txt) > bigrammes.txt
 
 ## Seance 8
-### corrig
+### Corrigé d'exercices
+#### Exo1
+cat "$FICHIER" | grep -P -o '\p{Latin}+' | tr '[:lower:]' '[:upper:]' | tr 'ÉÀÈ' 'éàè'| less 
+'\p{Latin}+' : correspond aux caractères latin
+tr 'ÉÀÈ' 'éàè' : transformer les caractères diacritité en minuscule
+#### Exo2
+./candide.txt | sort | uniq -c | sort -nr | head -n 4
+> pour les quatre premiers
+./candide.txt | sort | uniq -c | sort -nr | head -n | less
+./candide.txt | sort | uniq -c | sort -nr | tail -n 3
+> pour les trois derniers
+#### Exo3
+paste coll col2 | sort
+
+####mini-projet-html
+
+echo "<html>
+    <header>
+         <meta charset=\"UTF-8\">
+    </head>
+    <body>"
+
+echo “       <table>
+          <”
+
+lineno=1
+while read -r URL
+do
+  response=$(curl -s -I -L -w "%{http_code} -o /dev/null $URL)
+  encoding=$(curl -s -I -L -w "%{content_type} -o /dev/nyll 
+  echo "<tr>
+     <td>$lineno</td>
+    <td>$URL</td>
+      <td>$response</td>
+<td>$encoding</td>
+</tr>"
+  lineno=$(expr $lineno +1)
+done < "$URLS”
