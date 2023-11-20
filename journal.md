@@ -164,3 +164,6 @@ tr -d '[:punct:]' < mots_par_ligne.txt | tr '[:upper:]' '[:lower:]' > texte_nett
 cat ./fichier_nettoye.txt | sort | uniq -c | sort -nr | head -n $nb_mots
 
 >Bigrammes les plus fréquents avec paste <(head -n -1 fichier_nettoye_bigrammes.txt) <(tail -n +2 fichier_nettoye_bigrammes.txt) > bigrammes.txt
+
+## Seance 8
+### corrig

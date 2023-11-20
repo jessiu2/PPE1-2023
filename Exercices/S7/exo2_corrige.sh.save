@@ -1,0 +1,5 @@
+#!/bin/env bash
+
+FICHIER="$1"
+
+bash text2colonne.sh $FICHIER | sort |sort | uniq -c | sort -nr | hea
